@@ -16,8 +16,8 @@
     top: 55px;
     left: 125px;
     /* background-color: rgb(139, 135, 135); */
-    background-image:url(background/OIP.jpg);   /* 自宅用 */
-    /* background-image:url(https://doumyou.github.io/Doumyou.fnd27/background/OIP.jpg);   /* 提出サーバー用 */
+    /* background-image:url(background/OIP.jpg);   /* 自宅用 */
+    background-image:url(https://doumyou.github.io/Doumyou.fnd27/background/OIP.jpg);   /* 提出サーバー用 */
     background-size:contain;
     background-position: 50%;
 }
