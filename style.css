@@ -1,0 +1,308 @@
+/* 全要素に設定 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+/* カレンダーの設定 */
+.scheduleCalendar {
+    margin: 20px;
+    padding: 0;
+    width: 800px;
+    /* カレンダーの幅は800px */
+    overflow: auto;
+    /* 画面からあふれると消す */
+    float: left;
+    /* 画面の左に寄せる */
+}
+
+.buttonMonthMove {
+    /* カレンダー表示変更欄の設定 */
+    display: inline-block;
+    /* 横並びに設定 */
+    width: 100%;
+    clear: both;
+    text-align: center;
+    margin-bottom: 1em;
+    overflow: hidden;
+}
+
+.previousButton {
+    /* 先月ボタンの配置設定 */
+    float: left;
+}
+
+#previous {
+    /* 先月ボタンの設定 */
+    cursor: pointer;
+    /* 表示をポインターにする */
+    background-color: rgb(159, 236, 255);
+    border: 1px solid rgb(159, 236, 255);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.nextButton {
+    /* 翌月ボタンの配置設定 */
+    float: right;
+}
+
+#next {
+    /* 翌月ボタンの設定 */
+    cursor: pointer;
+    /* 表示をポインターにする */
+    background-color: rgb(159, 236, 255);
+    border: 1px solid rgb(159, 236, 255);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.tebleCalender {
+    /* カレンダー表全体の設定 */
+    width: 100%;
+    /* 画面の95% */
+    height: 30px;
+    /* 高さは300px */
+    border-collapse: collapse;
+    /* 表の境界設定 (隣接させる) */
+    margin-bottom: 15px;
+}
+
+.tebleCalender th {
+    /* カレンダーの曜日の覧の設定 */
+    margin: 0;
+    padding: 3px 0;
+    height: 50px;
+    width: 100px;
+    border: 1px solid gray;
+    text-align: center;
+    font-size: 30px;
+    vertical-align: top;
+}
+
+.tebleCalender td {
+    /* カレンダーの日付の欄の設定 */
+    margin: 0;
+    padding: 0;
+    height: 110px;
+    width: 100px;
+    border: 1px solid gray;
+    text-align: center;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.datePicker:nth-child(1),
+/* 日曜と土曜は色を付ける(休みですよ) */
+.datePicker:nth-child(7) {
+    background-color: rgb(255, 223, 252);
+}
+
+.datePicker.selected {
+    /* 当日の場合は日付のセルに色を設定する */
+    font-weight: bold;
+    background-color: rgb(218, 255, 252);
+}
+
+.theadWeekday:nth-child(1) {
+    /* 当月が日曜日の場合 */
+    background-color: rgb(255, 223, 252);
+}
+
+/* カレンダー表の設定 */
+.monthDesignation {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+#year,
+#month,
+#reconstruction {
+    /* 日付指定欄の設定 */
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#reconstruction {
+    margin-left: 10px;
+    width: 70px;
+}
+
+
+/* 各日の上段の設定 */
+.dayUpper {
+    padding: 0;
+    margin-bottom: 5px;
+    height: 20%;
+    display: flex;
+    /* 要素を横に並べる */
+    text-align: center;
+    /* 文字を中央にそろえる */
+    font-size: 20px;
+    /* フォントサイズの変更 */
+    justify-content: space-between;
+    /* 幅に対して均等に表示 */
+}
+
+.day {
+    width: 50%;
+}
+
+.weather {
+    width: 50%;
+}
+
+/* 各日の中段の設定 */
+.dayMiddle {
+    margin: 0;
+    padding: 3px 0 0 0;
+    height: 35%;
+    border-bottom: solid 1px rgb(223, 222, 222);
+}
+
+.walkDuty {
+    text-align: left;
+    font-size: 11px;
+    /* さんぽのフォント設定 */
+}
+
+/* 各日の下段の設定 */
+.dayLower {
+    margin: 0;
+    padding: 0;
+    height: 45%;
+    display: flex;
+    /* 要素を横に並べる */
+    text-align: center;
+    /* 文字を中央にそろえる */
+    font-size: 12px;
+    /* フォントサイズの変更 */
+    overflow: auto;
+    /* 画面からあふれると消す */
+}
+
+.scheduleTitle {
+    width: 35%;
+    /* 幅の設定 */
+    padding: 0 0 0 0;
+    margin: 0;
+    position: relative;
+    /* 内部のスパンの設定準備 */
+}
+
+.scheduleTitle>span {
+    /* 内部のスパンの設定 */
+    position: absolute;
+    top: 25%;
+    right: 10%;
+}
+
+.schedule {
+    width: 65%;
+    position: relative;
+    /* 内部のスパンの設定準備 */
+}
+
+.schedule>span {
+    /* 内部のスパンの設定 */
+    position: absolute;
+    top: 25%;
+    left: 5%;
+}
+
+/* 予定入力欄の設定 */
+.reserve {
+    /* 予定全体の設定 */
+    margin: 3px;
+    padding: 5px;
+    background-color: rgb(199, 255, 206);
+    width: 350px;
+}
+
+.reserve>h4>button {
+    /* 登録ボタンの設定 */
+    margin-bottom: 8px;
+    width: 70px;
+}
+
+.reserveDay>select {
+    /* 日付指定欄の設定 */
+    height: 25px;
+    text-align: center;
+}
+
+.amWalk,
+/* 予定記入欄の設定 */
+.pmWalk,
+.reserveMemo {
+    margin: 5px 0;
+    display: flex;
+    text-align: center;
+}
+
+#amWalk,
+/* 当番入力欄の設定 */
+#pmWalk {
+    width: 100px;
+    text-align: center;
+}
+
+#reserveContents {
+    /* 予定入力欄の設定(改行ができるように個別設定) */
+    padding: 5px;
+    width: 220px;
+    height: 50px;
+    font-size: 14px;
+}
+
+/* 真表示の設定 */
+.showPhoto {
+    margin: 0 0px 10px 40px;
+    padding-top: 20px;
+}
+
+.showPhoto>h2 {
+    width: 200px;
+}
+
+.uploadData>form>input {
+    /* 写真選択画面の設定 */
+    width: auto;
+}
+
+.uploadData>form>p>button {
+    /* 写真登録ボタンの設定 */
+    margin-top: 5px;
+    height: 25px;
+    width: 95px;
+}
+
+/* 画像の切り替え設定 */
+#changePic {
+    animation: imgfade 4s infinite;
+    opacity: 0;
+}
+@keyframes imgfade {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
