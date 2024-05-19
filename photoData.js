@@ -49,4 +49,4 @@ function changePhoto() {
     //秒数の指定(4sで切り替え(変更するときはstyle.cssも変更必要))
     setTimeout("changePhoto()", 4000);
 }
-changePhoto();
+//changePhoto();
