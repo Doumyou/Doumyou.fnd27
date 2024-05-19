@@ -42,8 +42,8 @@ class Asset {
         let loadCnt = 0
         for (let i = 0; i <= 6; i++) {
             let img = new Image();
-            img.src = blockImg[i];      //自宅用
-            // img.src = "https://doumyou.github.io/Doumyou.fnd27/" + blockImg[i];     //提出サーバー用
+            // img.src = blockImg[i];      //自宅用
+            img.src = "https://doumyou.github.io/Doumyou.fnd27/" + blockImg[i];     //提出サーバー用
             img.onload = function () {
                 loadCnt++
                 Asset.blockImages.push(img);
