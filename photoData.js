@@ -37,7 +37,7 @@ let cnt = 0;
 
 
 //初期設定(1枚目の写真を表示)
-changePhoto.src = img[0];
+changePhoto.src = "https://doumyou.github.io/Doumyou.fnd27/104454275527.jpg";
 //写真送り
 function changePhoto() {
     //画像選択
