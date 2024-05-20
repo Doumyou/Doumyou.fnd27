@@ -23,6 +23,7 @@ inputPhoto.addEventListener('change', inputData);
 
 //写真データの保存
 function savePhotos() {
+    console.log("fsdfasdfasdf");
     const fs = require(`fs`);
     const files = fs.readdirSync("https://doumyou.github.io/Doumyou.fnd27/background/");
     console.log(files)
