@@ -293,7 +293,7 @@
 }
 
 /* 画像の切り替え設定 */
-#changePic {
+#changePhoto {
     animation: imgfade 4s infinite;
     opacity: 0;
 }
