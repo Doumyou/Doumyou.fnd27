@@ -175,10 +175,6 @@
     font-size: 5vm;
     border-bottom: solid 1px rgb(223, 222, 222);
 }
-.amWalk p,
-.pmwalk p{
-    font-size: 10px;
-}
 
 .walkDuty {
     text-align: left;
