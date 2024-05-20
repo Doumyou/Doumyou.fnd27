@@ -31,22 +31,26 @@ function savePhotos() {
 //-------------------------------------------------------------------------
 
 //写真送り
-const img = [];     //画像データのファイル名一覧
+const img = ["2024010501.jpg","2024010502.jpg","2024010701.jpg","2024011001.jpg","2024040901.jpg","2024051101.jpg"];     //画像データのファイル名一覧
 let cnt = 0;
 //ファイル名一覧の取得
 
 
 //初期設定(1枚目の写真を表示)
-changePhoto.src = img[0];
+// changePhoto.src = "photo/" + img[0];   //自宅用
+changePhoto.src = "https://doumyou.github.io/Doumyou.fnd27/photo/" + img[0];   //提出サーバー用
 //写真送り
-function changePhoto() {
+function changePhotoData() {
     //画像選択
-    changePhoto.src = img[cnt];
+    console.log(cnt);
+    console.log(img[cnt]);
+    // changePhoto.src = "photo/" + img[cnt];     //自宅用
+    changePhoto.src = "https://doumyou.github.io/Doumyou.fnd27/photo/" + img[cnt];     //提出サーバー自宅用
     cnt++;
     if (cnt == img.length) {
         cnt = 0
     };
     //秒数の指定(4sで切り替え(変更するときはstyle.cssも変更必要))
-    setTimeout("changePhoto()", 4000);
+    setTimeout("changePhotoData()", 4000);
 }
-changePhoto();
+changePhotoData();
