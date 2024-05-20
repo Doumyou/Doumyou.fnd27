@@ -177,7 +177,7 @@
 
 .walkDuty {
     text-align: left;
-    font-size: 5vw;
+    font-size: 11px;
     /* さんぽのフォント設定 */
 }
 
@@ -297,6 +297,7 @@
     animation: imgfade 4s infinite;
     opacity: 0;
 }
+
 @keyframes imgfade {
     0% {
         opacity: 0;
