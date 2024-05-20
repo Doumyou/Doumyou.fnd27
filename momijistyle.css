@@ -247,17 +247,18 @@
     text-align: center;
 }
 
-.amWalk,
 /* 予定記入欄の設定 */
+.amWalk,
 .pmWalk,
 .reserveMemo {
     margin: 5px 0;
     display: flex;
     text-align: center;
+    font-size: 16px;
 }
 
-#amWalk,
 /* 当番入力欄の設定 */
+#amWalk,
 #pmWalk {
     width: 100px;
     text-align: center;
