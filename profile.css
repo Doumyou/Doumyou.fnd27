@@ -65,7 +65,9 @@
     font-size: 22px;
 }
 
-.profH2,
+.profH2{
+    font-size: 28px;
+}
 .profH1{
     font-size: 28px;
 }
