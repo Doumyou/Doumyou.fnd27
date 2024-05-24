@@ -19,6 +19,8 @@ const blockImg = [
     "block/block-5.png",
     "block/block-6.png"
 ];
+let gameScore = 0;
+const displayScore = document.getElementById("displayScore");
 
 //画面設定
 window.onload = function () {
@@ -54,11 +56,14 @@ class Asset {
                 }
             }
         }
+        //得点の初期化
+        displayScore.innerText=0;
     }
 }
 
 //ゲーム開始
 class Game {
+    
     constructor() {
         this.initMainCanvas();
         this.initNextCanvas();
@@ -87,6 +92,7 @@ class Game {
         clearInterval(this.timer);      // 落下処理
         this.timer = setInterval(() => this.dropBlock(), gameSpeed);   //落下スピードの設定
         this.setKeyEvent();             // キーボードイベントの登録
+        displayScore.innerText=0;       //得点の初期化
     }
 
     // 新しいブロックを読み込む
@@ -333,18 +339,28 @@ class Field {
     }
     //ブロックの消去判定(行が揃ったら消す)
     checkLine() {
+        let delLine = 0;
         for (let r = 0; r < rowsCnt; r++) {
             let c = this.blocks.filter(block => block.y === r).length;
             //1行が全てブロックで埋まったら消す
             if (c === horCnt) {
+                console.log("r:",r);
+                console.log("horCnt:",horCnt);
                 this.blocks = this.blocks.filter(block => block.y !== r);
                 this.blocks.filter(block => block.y < r).forEach(upper => upper.y++);
+                delLine = delLine + 1;
             }
         }
+        
+        //消したラインを得点に反映
+        if (delLine != 0){
+            gameScore = gameScore + delLine*100 + (delLine-1)*20;
+            displayScore.innerText=gameScore;
+        }
+        
     }
     //ブロックの位置
     has(x, y) {
-        console.log("あああ");
         return this.blocks.some(block => block.x == x && block.y == y);
     }
 }
