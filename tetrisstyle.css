@@ -43,6 +43,19 @@
     padding: 5px;
 }
 
+.score{
+    position: absolute;
+    top: 350px;
+    left: 475px;
+    background-color: rgb(186, 255, 255);
+    width: 210px;
+}
+
+.score p{
+    font-size:24px;
+    text-align: center;
+}
+
 .use{
     width: 200px;
     height: 10px;
