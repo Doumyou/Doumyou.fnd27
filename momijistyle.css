@@ -279,30 +279,19 @@
     background-color: rgb(255, 137, 137);       /*作成途中*/
 }
 
-
-
-/* 画像の切り替え設定 */
-#changePhoto {
-    max-width: 800px;
-    max-height: 650px;
-    /* animation: imgfade 4s infinite; */
-    /* opacity: 0; */
+/* 画像の切り替え設定 (swiper.js) */
+.swiper {
+    width: 800px;
+    height: 600px;
 }
 
-@keyframes imgfade {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    75% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+.swiper-slide>img {
+    display: block;
+    max-width: 600px;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 0;
 }
