@@ -50,8 +50,8 @@ for (const photoImg of img) {
     divCode = document.createElement("div");    //要素divの作成
     divCode.classList.add("swiper-slide");      //要素divにクラスの設定
     imgCode = document.createElement("img");    //要素imgの作成
-    imgCode.src = "photo/" + photoImg;          //画像の設定 自宅用
-    // imgCode.src = "https://doumyou.github.io/Doumyou.fnd27/photo/" + photoImg;          //画像の設定 提出サーバー用
+    // imgCode.src = "photo/" + photoImg;          //画像の設定 自宅用
+    imgCode.src = "https://doumyou.github.io/Doumyou.fnd27/photo/" + photoImg;          //画像の設定 提出サーバー用
     divCode.appendChild(imgCode);
     inputPhotoData.appendChild(divCode);      
 }
