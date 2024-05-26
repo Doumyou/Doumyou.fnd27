@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="profile.css">
   <link rel="stylesheet" href="momijistyle.css">
   <link rel="stylesheet" href="tetrisstyle.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"> <!-- 画像送りCDNの設定 -->
 </head>
 
 <body>
@@ -136,7 +137,23 @@
           <div class="viewPhoto">
             <h4>・今月のもみじ</h4>
             <div class="show">
-              <img id="changePhoto" src="" alt="画像の切り替え">
+              <!-- swiper.js -->
+              <!-- Slider main container -->
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper" id = "slidesList">
+                  <!-- Slides -->
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -144,6 +161,7 @@
         <!--JavaScriptの指定-->
         <script src="calendar.js" type="text/javascript"></script> <!--カレンダー作成用-->
         <script src="weatherApi.js" type="text/javascript"></script> <!--天気APIの取得用-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> <!-- 画像送りCDNの設定 -->
         <script src="photoData.js" type="text/javascript"></script> <!--写真データ登録・表示用-->
       </div>
     </div>
