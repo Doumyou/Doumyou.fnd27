@@ -260,8 +260,8 @@
     padding-top: 20px;
 }
 
-.showPhoto>h2 {
-    width: 200px;
+.showPhoto > h2 {
+    width: auto;
 }
 
 /* 写真選択画面の設定 */
